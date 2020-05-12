@@ -1,0 +1,186 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    grid-template-rows: repeat(3, 270px);
+    place-items: center;
+}   
+
+.square {
+    width: 70px;
+    height: 70px;
+    background-color: blueviolet;
+}
+
+.triangle {
+    width: 0px;
+    height: 0px;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid blueviolet;
+    border-left: 70px solid transparent;
+   
+}
+
+.circle {
+    background-color: blueviolet;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+}
+
+.rectangle {
+    width: 140px;
+    height: 70px;
+    background: blueviolet;
+}
+
+.triangleUp {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid blueviolet;
+}
+
+.triangleLeft {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid blueviolet;
+    border-right: 100px solid transparent;
+}
+
+.trapezoid {
+    width: 85px;
+    height: 0;
+    border-bottom: 100px solid blueviolet;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    
+}
+
+.parallelogram {
+    width: 95px;
+    height: 95px;
+    transform: skew(20deg);
+    background: blueviolet;
+}
+
+
+.star {
+    width: 0px;
+    height: 0px;
+    position: relative;
+    display: block;
+    color: blueviolet;
+    
+    border-right: 80px solid transparent;
+    border-bottom: 50px solid blueviolet;
+    border-left: 90px solid transparent;
+    transform: rotate(35deg);
+ }
+
+ .star:before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -42px;
+    left: -55px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+    border-bottom: 80px solid blueviolet;
+    border-left: 25px solid transparent;
+    border-right: 30px solid transparent;
+    
+ }
+
+ .star:after {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    display: block;
+    top: 3px;
+    left: -100px;
+    border-right: 95px solid transparent;
+    border-bottom: 50px solid blueviolet;
+    border-left: 80px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+ }
+
+
+.triangleDown {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid blueviolet;
+}
+
+.circle2 {
+    background-image: radial-gradient(circle, blueviolet, blueviolet 66%, transparent 66%);
+    height: 5em;
+    width: 5em;
+}
+
+
+.cube {
+    background-color: blueviolet;
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.cube::before {
+        content: '';
+        display: inline-block;
+        background-color: blueviolet;
+        border: 1px solid;
+        width: 100px;
+        height: 20px;
+        transform: skewX(-40deg);
+        position: absolute;
+        top: -20px;
+        left: 8px;
+}
+
+.cube::after {
+    content: '';
+    display: inline-block;
+    background-color: blueviolet;
+    border: 1px solid;
+    width: 16px;
+    height: 100px;
+    transform: skewY(-50deg);
+    position: absolute;
+    top: -10px;
+    left: 100%;
+}
+
+
+.pyramid {
+    width: 100px;
+    height: 200px;
+}
+
+.pyramid::before, .pyramid::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 43px solid;
+    position: absolute;
+
+}
+
+.pyramid::before {
+    border-color: transparent transparent #7700ff transparent;
+    transform: scaleY(2) skewY(-40deg) rotate(45deg);
+
+}
+
+.pyramid::after {
+    border-color: transparent transparent #5500b6 transparent;
+    transform: scaleY(2) skewY(40deg) rotate(-45deg);
+
+}    
